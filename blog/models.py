@@ -21,7 +21,7 @@ class Post(models.Model):
     status = models.CharField(max_length=2, choices=Status.choices, default=Status.DRAFT)
 
     class Meta:
-        ordering = ['-published']
+        ordering = ['-publish']
         indexes = [
             models.Index(fields=['-publish']),
         ]
