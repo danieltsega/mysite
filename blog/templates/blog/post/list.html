@@ -4,22 +4,23 @@
 
 {% block content %}
 <div class="border-b-2 border-gray-400">
-    <h1>My Blog</h1>
+    <h1 class="text-4xl font-bold mb-2">My Blog</h1>
 </div>
 
 {% for post in posts %}
-<h2>
+<h2 class="mt-8 text-blue-500 text-2xl font-semibold mb-2">
     <a href="{% url 'blog:post_detail' post.id %}">
         {{ post.title }}
     </a>
 </h2>
 
-<p>
+<p class="text-sm text-gray-500 italic mb-2">
     Published {{ post.publish }} by {{ post.author }}
 </p>
 
+<p class="text-black font-bold text-lg">
 {{ post.body|truncatewords:30|linebreaks }}
-
+</p>
 {% endfor %}
 
 {% endblock %}
