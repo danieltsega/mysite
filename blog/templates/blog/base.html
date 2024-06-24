@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex justify-between">
+    <div class="p-4">{% block content %} {% endblock %}</div>
+
+    <div class="p-4 bg-orange-200">
+      <h2>My Blog</h2>
+      <p>This is my blog</p>
+    </div>
+  </body>
+</html>
