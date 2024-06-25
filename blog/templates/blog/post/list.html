@@ -9,7 +9,7 @@
 
 {% for post in posts %}
 <h2 class="mt-8 text-blue-500 text-2xl font-semibold mb-2">
-    <a href="{% url 'blog:post_detail' post.id %}">
+    <a href="{{ post.get_absolute_url }}">
         {{ post.title }}
     </a>
 </h2>
