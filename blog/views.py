@@ -8,9 +8,9 @@ from django.core.paginator import Paginator
 def post_list(request):
     post_list = Post.published.all()
     # Add pagination to post list
-    pagination = Paginator(post_list, 3)
+    paginator = Paginator(post_list, 3)
     page_number = request.GET.get('page', 1)
-    posts = pagination.page(page_number)
+    posts = paginator.page(page_number)
 
     return render(request, 'blog/post/list.html', {'posts': posts})
 
